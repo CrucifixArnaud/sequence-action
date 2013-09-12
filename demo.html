@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <meta charset="utf-8">
+  <meta name="author" content="Crucifix Arnaud">
+  <meta name="description" content="Development laboratory">
+  <title>Crucifix Arnaud &mdash; lab > js > animate-sequence</title>
+	<link rel="stylesheet" media="screen" href="css/styles.css"> 
+	
+	<div id="global">
+		<nav id="main-menu" class="menu">
+			<button href="#" id="btn-menu-toggle" class="btn-menu-toggle">Menu</i></button>
+			<ul id="main-menu-items" class="hideable flip">
+				<li><a href="#">Menu 1</a>
+				<li><a href="#">Menu 2</a>
+				<li><a href="#">Menu 3</a>
+				<li><a href="#">Menu 4</a>
+				<li><a href="#">Menu 5</a>
+				<li><a href="#">Menu 6</a>
+			</ul>
+		</nav>
+	</div>
+	<script src="js/animate-sequence.js"></script>
+	<script>
+		
+		var itemsList = document.getElementById("main-menu-items");
+		var btnMain = document.getElementById("btn-menu-toggle");
+		var itemsListState = false;
+		var animationState = false;
+		
+		btnMain.onclick = function(e){
+			e.preventDefault();
+			// Prevent click during animation
+			if(animationState == false){
+				animationState = !animationState;
+				if(itemsListState == false){
+					//itemsList.classList.toggle("hideable");
+					animateSequence(itemsList, {
+							direction: 'forward',
+							duration: '60', 
+							callback: function(){
+								itemsListState = !itemsListState; // toggle itemsListState
+								animationState = !animationState; // toggle animationstate
+						}
+					});		
+				}else{
+					animateSequence(itemsList, {
+						direction: 'backward', 
+						duration: '60',
+						callback: function(){
+							itemsListState = !itemsListState; // toggle itemsListState
+							animationState = !animationState; // toggle animationstate
+						}
+					});				
+				}
+			}
+		}
+		  
+	</script>

@@ -1,0 +1,160 @@
+/*------------------------*\
+	Responsive Nav - Styles
+\*------------------------*/
+
+/*------------------------*\
+	$Reset
+\*------------------------*/
+
+* {
+	margin:0;
+	padding:0;
+}
+
+/*------------------------*\
+	$General
+\*------------------------*/
+
+html {
+	font-family: verdana;
+}
+
+#global {
+	max-width:980px;
+	margin:auto;
+	padding-top:40px;
+}
+
+.hide {
+	display:none;
+}
+
+/*------------------------*\
+	$Nav
+\*------------------------*/
+
+.menu ul {
+	list-style-type:none;
+	border-top:3px solid #eee;
+}
+
+.menu .hideable {
+	position:relative;
+	overflow:hidden;
+}
+
+
+.menu li {
+	width:100%;
+	height:auto;
+	text-align:center;
+	vertical-align:middle;
+	background:#cbb3d8;
+}
+
+.menu li a {
+	line-height:3;
+}
+
+.menu a {
+	display:inline-block;
+	color:#333;
+	width:100%;
+	text-decoration:none;
+	line-height:9;
+	outline: 0;
+}
+
+.menu a:hover,
+.menu a:focus,
+.menu a:active {
+	background:rgba(255,255,255,0.3);
+	padding:0;
+}
+
+	.menu li:nth-child(2) {
+		background:#d3b9d2;
+	}
+	
+	.menu li:nth-child(3) {
+		background:#dbbecc;
+	}
+	
+	.menu li:nth-child(4) {
+		background:#e3c4c7;
+	}
+	
+	.menu li:nth-child(5) {
+		background:#ebcac1;
+	}
+	
+	.menu li:nth-child(6) {
+		background:#f3d0bc;
+	}
+
+.menu button {
+	background:transparent;
+	border:none;
+	font-size:1.4em;
+	padding-left:10px;
+	color:#333;
+	width:100%;
+	text-align:left;
+	cursor:pointer;
+}
+
+.menu button:hover + ul,
+.menu button:focus + ul {
+	border-color:#ccc;
+}
+
+.menu button:active + ul {
+	border-color:#333;
+}
+
+/*------------------------*\
+	$transition
+\*------------------------*/
+
+.flip {
+	-webkit-perspective: 400px;
+	   -moz-perspective: 400px;
+	    -ms-perspective: 400px;
+	     -o-perspective: 400px;
+	        perspective: 400px;
+	
+	-webkit-perspective-origin: 50% 50%;
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	     -o-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.flip li {
+	opacity:0;
+	-webkit-transition: all 600ms ease, opacity 200ms ease;
+	   -moz-transition: all 600ms ease, opacity 200ms ease;
+	    -ms-transition: all 600ms ease, opacity 200ms ease;
+	     -o-transition: all 600ms ease, opacity 200ms ease;
+	        transition: all 600ms ease, opacity 200ms ease;
+	-webkit-transform-origin: 0% 0%;
+		 -moz-transform-origin: 0% 0%;
+		  -ms-transform-origin: 0% 0%;
+		   -o-transform-origin: 0% 0%;
+		      transform-origin: 0% 0%;
+	-webkit-transform: rotateX( -90deg );
+		 -moz-transform: rotateX( -90deg );
+		  -ms-transform: rotateX( -90deg );
+		   -o-transform: rotateX( -90deg );
+		      transform: rotateX( -90deg );
+}
+
+.flip li.on {
+	opacity:1;
+	-webkit-transform: rotateX( 0 );
+	   -moz-transform: rotateX( 0 );
+	    -ms-transform: rotateX( 0 );
+	     -o-transform: rotateX( 0 );
+	        transform: rotateX( 0 );
+}
+
