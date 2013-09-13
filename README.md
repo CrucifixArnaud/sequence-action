@@ -66,20 +66,14 @@ You can check into /demo (or live at [lab.crucifixarnaud.com/js/sequence-action]
 Browsers allready tested:
 
 * **Firefox 3.6+**
-* **Chrome**
-* **Safari (v5?)**
-* **Opera (v10?)**
+* **Chrome 8+**
+* **Safari v5.1+**
+* **Opera 11.5+**
+* **Internet Explorer 10+**
 
 * **Safari Mobile**
 * **Android (v4+) Android Browser**
 * **Android (v4+) Chrome**
-
-Not currently test:
-
-* **ie10**
-* **ie9**
-* **ie8**
-* **ie7**
 
 
 
