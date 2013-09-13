@@ -58,7 +58,7 @@ Or any childs of a given parent. They don't need to be similar tag.
 		...
 	</article>
 
-You can check into /demo (or live at [lab.crucifixarnaud.com/js/sequence-action](//lab.crucifixarnaud.com/js/sequence-action) for an example using css transition on a list.
+You can check into /demo (or live at [lab.crucifixarnaud.com/js/sequence-action](http://lab.crucifixarnaud.com/js/sequence-action) for an example using css transition on a list.
 
 ## Support
 
