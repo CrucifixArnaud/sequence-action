@@ -1,5 +1,6 @@
 // animate-sequence.js - Crucifix Arnaud (hello@crucifixarnaud.com)
 // Select items in sequence, and toggle class "on"
+// Doc and Download : https://github.com/CrucifixArnaud/sequence-action
 
 /*------------------------*\
 	@params
@@ -22,7 +23,7 @@ var animateSequence = function(_target, _params){
 	// Set options
 	var _params 		= _params || {};
 	var _direction 	= _params.direction || 'forward';
-	var _duration 	= _params.duration || '100';
+	var _duration 	= _params.duration || 100;
 	var _callback 	= _params.callback || null;
 	
 	if(_direction == "backward"){

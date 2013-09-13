@@ -3,6 +3,19 @@
 
 Use to animate all childrens of a given element in sequence, simply select items one by one, and toggle class "on".
 
+## Params
+
+	animateSequence(_target, _params);
+	
+* **_target**, *String* (Required) : Parent of the items to animates (ul, div, etc) 
+* **_params**, *Array* (Optional) :  
+	* **direction**, *string* : 
+		* **forward**: Animate from first to last child (default)
+		* **backward**: Animate from last to first child
+	* **duration**, *int* : Time in **ms** between each step (default : **100ms**)
+	* **callback**, *function* : Do what you whant
+
+
 ## Use
 
 Load **animate-sequence.js** in your page.
@@ -10,19 +23,23 @@ Load **animate-sequence.js** in your page.
 Simply call the animate-sequence function
 
 	animateSequence(_target, _params);
-	
-* **_target** (Required) : Parent of the items to animates (ul, div, etc) 
-* **_params** (Optional) :  
-	* **_direction** : 
-		* **forward**: Animate from first to last child (default)
-		* **backward**: Animate from last to first child
-	* **_duration**: Time in **ms** between each step (default : **60ms**)
-	* **_callback**: Do what you whant
 
 You can only animate adjacent children of a given parent.
 
 For example all **li** of a list:
 
+	Js:
+	
+	animateSequence('ul', {
+		direction: 'backward',
+		duration: 100,
+		callback: function(){
+			//Anything you want;
+		}
+	});
+	
+	Html:
+	
 	<ul>
 		<li>Item 1</li>
 		<li>Item 2</li>
@@ -41,7 +58,7 @@ Or any childs of a given parent. They don't need to be similar tag.
 		...
 	</article>
 
-You can check [demo.html]() for an example using css transition on a list.
+You can check into /demo (or live at [lab.crucifixarnaud.com/js/sequence-action](//lab.crucifixarnaud.com/js/sequence-action) for an example using css transition on a list.
 
 ## Support
 
@@ -74,6 +91,6 @@ Not currently test:
 
 ## Credits
 
-Created by Crucifix Arnaud ([crucifixarnaud.com]())
+Created by Crucifix Arnaud ([crucifixarnaud.com](http://crucifixarnaud.com))
 
-This is free and unencumbered software released into the public domain. ([unlicense.org]())
+This is free and unencumbered software released into the public domain. ([http://unlicense.org]())
