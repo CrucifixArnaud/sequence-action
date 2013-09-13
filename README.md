@@ -1,4 +1,4 @@
-# Sequence-action - v1.0
+# Sequence-action - v1.0.1
 ===
 
 Use to animate all childrens of a given element in sequence, simply select items one by one, and toggle class "on".
