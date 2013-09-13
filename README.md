@@ -86,7 +86,8 @@ Not currently test:
 ## Changelog
 
 * **v1.0** Initial Release
-	* _params : direction (forward, backward), duration, callback
+	* *v1.0.0*: _params, direction (forward, backward), duration, callback
+	* *v1.0.1*: Update doc, sequence-action.min.js
 
 
 ## Credits
